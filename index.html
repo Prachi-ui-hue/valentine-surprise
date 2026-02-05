@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>For You ❤️</title>
+  <style>
+    body {
+      background: #ffe6eb;
+      text-align: center;
+      font-family: Arial;
+      padding-top: 80px;
+    }
+    button {
+      padding: 10px 25px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .yes { background: #ff4d6d; color: white; }
+    .no { background: gray; color: white; }
+    img { border-radius: 15px; margin-top: 20px; }
+  </style>
+</head>
+
+<body>
+  <h1 id="q">Will you be my Valentine? ❤️</h1>
+
+  <button class="yes" onclick="next()">Yes</button>
+  <button class="no" onclick="alert('No option allowed 😜')">No</button>
+
+  <script>
+    let i = 0;
+    let questions = [
+      "Prachi ke Valentine banoge? ❤️",
+      "Yaad hai humari first meet? 🥺",
+      "Distance ke bawajood mera saath doge? 🌍❤️",
+      "Happy Valentine’s Day ❤️ I love you ♾️"
+    ];
+
+    function next() {
+      document.getElementById("q").innerText = questions[i];
+      i++;
+    }
+  </script>
+</body>
+</html>
