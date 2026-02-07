@@ -38,6 +38,19 @@
   <button class="no" onclick="alert('No option allowed 😜')">No</button>
 
   <script>
+    function next() {
+  document.getElementById("q").innerText = "Yayyy ❤️";
+  document.getElementById("quiz").style.display = "block";
+}
+
+function answer(correct) {
+  if (correct) {
+    alert("Correct 😍");
+  } else {
+    alert("Nope 😜 Try again");
+  }
+}
+
     let i = 0;
     let questions = [
       "BAE ke Valentine banenge? ❤️",
@@ -50,6 +63,22 @@
       document.getElementById("q").innerText = questions[i];
       i++;
     }
+    </script>
+  <div id="quiz" style="display:none;">
+  <h2>Let's see how well you remember us 💕</h2>
+
+  <p>💖 When did we first meet?</p>
+  <button onclick="answer(true)">Correct Date</button>
+  <button onclick="answer(false)">Wrong Date</button>
+
+  <p>💖 Where was our first date?</p>
+  <button onclick="answer(true)">Correct Place</button>
+  <button onclick="answer(false)">Wrong Place</button>
+</div>
+
+</body>
+</html>
+
   </script>
 </body>
 </html>
